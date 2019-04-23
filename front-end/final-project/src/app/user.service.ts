@@ -40,5 +40,13 @@ export class UserService {
   getChatRoomsChat(chatRoom) {
     return this.http.get('http://localhost:3000/chatroom/' + chatRoom);
   }
-
+  adminlogin(adminuser) {
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:3000/api/login', adminuser, {headers: headers});
+  }
+  adminloggedIn() {
+    const user = JSON.parse(localStorage.getItem('adminuser'));
+    return user != null ? true : false;
+  }
 }

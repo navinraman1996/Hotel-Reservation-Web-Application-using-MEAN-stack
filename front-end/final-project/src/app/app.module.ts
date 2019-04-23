@@ -21,6 +21,7 @@ import { DetailsComponent } from './details/details.component';
 import { BookingComponent } from './booking/booking.component';
 import { ReceiptComponent } from './receipt/receipt.component';
 import { AdminComponent } from './admin/admin.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { AdminComponent } from './admin/admin.component';
     BookingComponent,
     ReceiptComponent,
     AdminComponent,
+    AdminloginComponent,
 
   ],
   imports: [
