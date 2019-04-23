@@ -12,9 +12,13 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { NavtabsComponent } from './navigation/navtabs/navtabs.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { SearchComponent } from './search/search.component';
-import { AccomodationComponent } from './accomodation/accomodation.component';
 import { MaterialModule } from './material.module';
 import { HelpComponent } from './help/help.component';
+import { AccomodationComponent } from './accomodation/accomodation.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DetailsComponent } from './details/details.component';
+import { BookingComponent } from './booking/booking.component';
+import { ReceiptComponent } from './receipt/receipt.component';
 
 @NgModule({
   declarations: [
@@ -25,15 +29,20 @@ import { HelpComponent } from './help/help.component';
     NavtabsComponent,
     SidenavListComponent,
     SearchComponent,
+    HelpComponent,
     AccomodationComponent,
-    HelpComponent
+    DetailsComponent,
+    BookingComponent,
+    ReceiptComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
