@@ -12,11 +12,8 @@ const mongoose=require('mongoose')
 //importing the booking route by specifying the path for handelling different types of requests
 const bookingRoutes=require('./api/routes/bookings');
 const orderRoutes=require('./api/routes/orders');
-<<<<<<< HEAD
-=======
 
 const userRoutes=require('./api/routes/user');
->>>>>>> 716b5e84e417a273a62573d2ce6b6176eb8f6b3e
 //connecting to the database
 mongoose.connect('mongodb+srv://assignment_8:'+process.env.MONGO_ATLAS_PW+'@cluster0-5ffvf.mongodb.net/test?retryWrites=true',
 {useNewUrlParser:true}
@@ -43,15 +40,12 @@ next();
 //middleware for forwarding the request
 
 app.use('/bookings',bookingRoutes);
-<<<<<<< HEAD
 app.use('/uploads',express.static('uploads'));
  app.use('/orders',orderRoutes);
-=======
 //middleware for uploading pictures
 app.use('/uploads',express.static('uploads'));
  app.use('/orders',orderRoutes);
  app.use('/user',userRoutes);
->>>>>>> 716b5e84e417a273a62573d2ce6b6176eb8f6b3e
 // this is used to check if a particular route is not found amongst the fitting routes
 app.use((req,res,next)=>{
       const error= new Error('Not found at all');
