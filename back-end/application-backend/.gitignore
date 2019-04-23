@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
@@ -48,7 +47,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-=======
 .#*
 *~
 *#
@@ -65,4 +63,3 @@ Thumbs.db
 dist/docs/
 package-lock.json
 /dist
->>>>>>> 81b81a62abd945ed0f6b9f8d254d6eb7cf4701c0
