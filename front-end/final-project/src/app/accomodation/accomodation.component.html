@@ -1,3 +1,8 @@
-<p>
-  accomodation works!
-</p>
+<h1>Existing Contacts</h1>
+
+<ul>
+  <!-- for each contact in the contacts list  -->
+  <li *ngFor="let contact of contacts$">  <!--Angular directive *ngFor-->
+    <a routerLink="/details/{{contact._id}}">{{ contact.fname }} {{ contact.lname }}</a> <!--Using interpolation brackets to call upon the properties of the returned object to display them in the browser!-->
+  </li>
+</ul>

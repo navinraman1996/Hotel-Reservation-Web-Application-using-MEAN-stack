@@ -11,7 +11,6 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { NavtabsComponent } from './navigation/navtabs/navtabs.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { SearchComponent } from './search/search.component';
-import { AccomodationComponent } from './accomodation/accomodation.component';
 import { MaterialModule } from './material.module';
 import { HelpComponent } from './help/help.component';
 import { LoginComponent } from './login/login.component';
@@ -19,6 +18,10 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { NgFlashMessagesModule } from 'ng-flash-messages';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
+import { AccomodationComponent } from './accomodation/accomodation.component';
+import { DetailsComponent } from './details/details.component';
+import { BookingComponent } from './booking/booking.component';
+import { ReceiptComponent } from './receipt/receipt.component';
 
 @NgModule({
   declarations: [
@@ -29,10 +32,14 @@ import { FormsModule } from '@angular/forms'
     NavtabsComponent,
     SidenavListComponent,
     SearchComponent,
+    HelpComponent,
     AccomodationComponent,
     HelpComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    DetailsComponent,
+    BookingComponent,
+    ReceiptComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +50,7 @@ import { FormsModule } from '@angular/forms'
     FlexLayoutModule,
     HttpClientModule,
     NgFlashMessagesModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]
