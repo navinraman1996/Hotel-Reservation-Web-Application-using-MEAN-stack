@@ -40,9 +40,6 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-# e2e		
-40	/e2e/*.js		
-41	/e2e/*.map
 
 # System Files
 .DS_Store

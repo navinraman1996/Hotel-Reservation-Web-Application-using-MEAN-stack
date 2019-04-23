@@ -113,6 +113,11 @@ router.get('/:orderId',(req,res,next)=>{
 router.delete('/:orderId',(req,res,next)=>{
     Order.remove({_id:req.params.orderId})
     
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> 716b5e84e417a273a62573d2ce6b6176eb8f6b3e
   .exec()
   .then(result=>{
       res.status(200).json({

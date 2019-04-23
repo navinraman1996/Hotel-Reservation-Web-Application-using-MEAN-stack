@@ -40,7 +40,26 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+# e2e		
+40	/e2e/*.js		
+41	/e2e/*.map
 
 # System Files
 .DS_Store
 Thumbs.db
+.#*
+*~
+*#
+#*
+*.log
+*.tmp
+.DS_Store
+**/npm-cache
+/node_modules
+/tmp
+.idea/
+.vscode/
+.idea/workspace.xml
+dist/docs/
+package-lock.json
+/dist
