@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
-import { NavigationComponent } from './navigation/navigation.component';
+
 import { HeaderComponent } from './navigation/header/header.component';
 import { NavtabsComponent } from './navigation/navtabs/navtabs.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
@@ -27,7 +27,6 @@ import { AdminComponent } from './admin/admin.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    NavigationComponent,
     HeaderComponent,
     NavtabsComponent,
     SidenavListComponent,

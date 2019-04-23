@@ -1,5 +1,4 @@
 import { Router } from '@angular/router';
-import { NgFlashMessageService } from 'ng-flash-messages';
 
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
@@ -14,7 +13,6 @@ export class LoginComponent implements OnInit {
   username: String;
   password: String;
   constructor(private userService : UserService,
-    private ngFlashMessageService: NgFlashMessageService,
     private router: Router ) { }
 
   ngOnInit() {
