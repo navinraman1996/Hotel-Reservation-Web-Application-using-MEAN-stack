@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav-list',
@@ -9,12 +10,14 @@ export class SidenavListComponent implements OnInit {
 
   @Output() closeSideNavigation = new EventEmitter();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   onToggleClose() {
-    this.closeSideNavigation.emit();
+    localStorage.removeItem('user');
+    this.router.navigate(['/']);
+
   }
 }

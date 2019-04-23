@@ -1,3 +1,9 @@
-<p>
-  help works!
-</p>
+<ng-template #buttons>
+  <a class="btn btn-info" [routerLink]="['/login']">Login</a>
+  <a class="btn btn-primary" [routerLink]="['/signup']">Sign-up</a> 
+</ng-template>
+  <div *ngIf="userService.loggedIn(); else buttons" class="container">
+  <p>
+    help works!
+  </p>
+</div>
