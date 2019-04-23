@@ -19,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './details/details.component';
 import { BookingComponent } from './booking/booking.component';
 import { ReceiptComponent } from './receipt/receipt.component';
+import { AdminComponent } from './admin/admin.component';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ReceiptComponent } from './receipt/receipt.component';
     AccomodationComponent,
     DetailsComponent,
     BookingComponent,
-    ReceiptComponent
+    ReceiptComponent,
+    AdminComponent,
+
   ],
   imports: [
     BrowserModule,
