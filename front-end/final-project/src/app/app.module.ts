@@ -22,6 +22,7 @@ import { BookingComponent } from './booking/booking.component';
 import { ReceiptComponent } from './receipt/receipt.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 import { AdminaddhotelComponent } from './adminaddhotel/adminaddhotel.component';
 
@@ -43,6 +44,7 @@ import { AdminaddhotelComponent } from './adminaddhotel/adminaddhotel.component'
     ReceiptComponent,
     AdminhomeComponent,
     AdminaddhotelComponent,
+    AdminloginComponent,
 
   ],
   imports: [
