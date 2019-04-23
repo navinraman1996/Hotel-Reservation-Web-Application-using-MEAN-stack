@@ -1,3 +1,6 @@
+
+import { AdminhomeComponent } from './adminhome/adminhome.component';
+
 import { BookingComponent } from './booking/booking.component';
 import { DetailsComponent } from './details/details.component';
 import { NgModule } from '@angular/core';
@@ -10,6 +13,7 @@ import { HelpComponent } from './help/help.component';
 import { LoginComponent } from './login/login.component'
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AccomodationComponent } from './accomodation/accomodation.component';
+import { AdminaddhotelComponent } from './adminaddhotel/adminaddhotel.component';
 
 const routes: Routes = [
   { path: 'accomodation', component: AccomodationComponent },
@@ -19,7 +23,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignUpComponent },
   { path: 'help', component: HelpComponent },
-  { path: 'booking', component: BookingComponent }
+  { path: 'booking', component: BookingComponent },
+  { path: 'adminhome', component: AdminhomeComponent },
+  { path: 'adminaddhotel', component: AdminaddhotelComponent },
 ];
 
 @NgModule({
