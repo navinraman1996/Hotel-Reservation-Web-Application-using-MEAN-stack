@@ -3,7 +3,7 @@
 <!-- creating form for adding a new contact as a data entry -->
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
 
-  <!-- settiing the validation for the first name field with the error messages for each validation -->
+  
   <label>
     First Name: 
     <input type="text" formControlName="fname" minlength="3" maxlength="15" required pattern="[A-Za-z]+"> 
@@ -44,11 +44,12 @@
   </label>
 
   <!-- add contact button (submit button for the form) -->
-  <input type="submit" value="Add Contact" class="formButton">
-
+  <!-- <input type="submit" value="Add Contact" class="formButton"> -->
+<input type="submit" value="Add Hotel" class="formButton">
+  &nbsp;&nbsp;&nbsp;
+  <button type="button" value="Update Contact" (click)="update()" class="formButton"> update </button>
   &nbsp;&nbsp;&nbsp;
   <button type="button" class="btn btn-success" [routerLink]="['/adminhome']" routerLinkActive="router-link-active">Go back to hotel list</button>
   <!-- submitted message -->
   <h3 *ngIf="success">*********New contact has been added!*********</h3>
-
 </form>

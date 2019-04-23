@@ -50,5 +50,8 @@ export class AdminaddhotelComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  update()
+  {
+    console.log("updating contact")
+  }
 }

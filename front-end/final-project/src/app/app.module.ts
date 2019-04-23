@@ -25,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 import { AdminaddhotelComponent } from './adminaddhotel/adminaddhotel.component';
+import { AdmindetailsComponent } from './admindetails/admindetails.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { AdminaddhotelComponent } from './adminaddhotel/adminaddhotel.component'
     AdminhomeComponent,
     AdminaddhotelComponent,
     AdminloginComponent,
+    AdmindetailsComponent,
 
   ],
   imports: [

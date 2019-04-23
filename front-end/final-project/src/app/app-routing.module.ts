@@ -15,10 +15,12 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { AccomodationComponent } from './accomodation/accomodation.component';
 import { AdminaddhotelComponent } from './adminaddhotel/adminaddhotel.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdmindetailsComponent } from './admindetails/admindetails.component';
 
 const routes: Routes = [
   { path: 'accomodation', component: AccomodationComponent },
   { path: 'details/:id', component: DetailsComponent},
+  { path: 'admindetails/:id', component: AdmindetailsComponent},
   { path: 'search', component: SearchComponent },
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
