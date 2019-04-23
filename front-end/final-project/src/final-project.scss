@@ -69,19 +69,19 @@ $thea-accent: (
 );
 
 
-$theahotel-primary: mat-palette($thea-primary, 700, 300, 900);
-$theahotel-accent:  mat-palette($thea-accent, 500, 400, 700);
+$final-project-primary: mat-palette($thea-primary, 700, 300, 900);
+$final-project-accent:  mat-palette($thea-accent, 500, 400, 700);
 
-$theahotel-warn:    mat-palette($mat-red);
+$final-project-warn:    mat-palette($mat-red);
 
-$theahotel: mat-light-theme($theahotel-primary, $theahotel-accent, $theahotel-warn);
+$final-project: mat-light-theme($final-project-primary, $final-project-accent, $final-project-warn);
 
 @import './app/navigation/navtabs/navtabs.component-theme.scss';
 
-@include angular-material-theme($theahotel);
+@include angular-material-theme($final-project);
 
 // Navtabs component scss file
-@include navtabs-component-theme($theahotel);
+@include navtabs-component-theme($final-project);
 
 
 ///////////////////////////////////////////////////////
@@ -119,6 +119,6 @@ $thea-typography: mat-typography-config(
 .mat-list-option.mat-list-item-focus, 
 .mat-nav-list .mat-list-item:hover, 
 .mat-nav-list .mat-list-item.mat-list-item-focus {
-  background-color: mat-color($theahotel-primary, 300);
-  color: mat-color($theahotel-primary, 900);
+  background-color: mat-color($final-project-primary, 300);
+  color: mat-color($final-project-primary, 900);
 }
