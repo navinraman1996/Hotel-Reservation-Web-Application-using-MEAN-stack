@@ -17,6 +17,7 @@ import { AdminaddhotelComponent } from './adminaddhotel/adminaddhotel.component'
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { ReceiptComponent } from './receipt/receipt.component';
 import { AdmindetailsComponent } from './admindetails/admindetails.component';
+import { ConfirmbookingComponent } from './confirmbooking/confirmbooking.component';
 
 const routes: Routes = [
   { path: 'accomodation', component: AccomodationComponent },
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'receipt', component: ReceiptComponent },
   { path: 'adminhome', component: AdminhomeComponent },
   { path: 'adminaddhotel', component: AdminaddhotelComponent },
+  { path: 'confirmbooking', component: ConfirmbookingComponent },
 ];
 
 @NgModule({
