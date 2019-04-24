@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpService } from "../app/http.service";
+
 
 @Component({
   selector: 'app-root',

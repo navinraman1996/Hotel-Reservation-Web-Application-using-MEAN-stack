@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('mongodb');
 const socket = require('socket.io');
-const port = 3000;
+const port = 3001;
 let users;
 let count;
 let chatRooms;
