@@ -33,7 +33,7 @@ const upload=multer({storage:storage});
 router.get('/',BookingsController.bookings_get_all);
       
 //to create a booking
-router.post('/',upload.single('productImage'),BookingsController.bookings_create_bookings);
+router.post('/',upload.single('hotelImage'),BookingsController.bookings_create_bookings);
 //to obtain a specific booking
 router.get("/:bookingId",BookingsController.bookings_get_specific);
 
@@ -54,7 +54,7 @@ router.get("/:bookingId",BookingsController.bookings_get_specific);
 //});
 
 //to update the bookings
-router.put('/:bookingId',upload.single('productImage'),BookingsController.bookings_update);
+router.put('/:bookingId',upload.single('hotelImage'),BookingsController.bookings_update);
 //to delete a specific booking
 router.delete('/:bookingId',BookingsController.bookings_delete);
 

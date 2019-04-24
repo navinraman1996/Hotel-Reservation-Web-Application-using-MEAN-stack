@@ -1,15 +1,19 @@
 //creating the model and schema for bookings
 //importing mongoose
+'use strict'
 const mongoose=require('mongoose')
+const Schema=mongoose.Schema;
 
 //Schema showing how the product will look like
-const bookingSchema= mongoose.Schema({
+const bookingSchema= Schema({
     _id:mongoose.Schema.Types.ObjectId,
-    fname:{type:String,required:true},
-    lname:{type:String,required:true},
+    hotelname:{type:String,required:true},
+    numberofguests:{type:Number,required:true},
     roomtype:{type:String,required:true},
+    ratings:{type:String,required:true},
     price:{type:Number, required:true},
-    productImage:{type:String}
+    description:{type:String,required:true},
+    hotelImage:{type:String}
     
 });
 module.exports=mongoose.model('Booking',bookingSchema);
