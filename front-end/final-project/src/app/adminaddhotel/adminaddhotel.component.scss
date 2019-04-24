@@ -1,0 +1,47 @@
+// Adding style for form 
+label {
+    display: block;
+    
+    input{
+        display: block;
+        width: 50%;
+        margin-bottom: 20px;
+        padding: 1em;
+    }
+
+    // hover the mouse over each data entry
+    input:hover {
+        border-color: #00A8FF;
+    }
+
+    // styling for error message
+    .error {
+        margin-top: -20px;
+        color: red;
+        padding: .2em;
+        display: inline-block;
+        font-size: .9em;
+        margin-bottom: 20px;
+    }
+}
+
+// styling for form submit button
+.formButton {
+    background: #00A8FF;
+    border: none;
+    color: white;
+
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+    font-family: 'Montserrat';
+}
+
+// styling for form submitted message
+h3 {
+    background-color: rgb(31, 43, 49);
+    color: aliceblue;
+    text-align: center;
+    border-radius: 4px;
+}

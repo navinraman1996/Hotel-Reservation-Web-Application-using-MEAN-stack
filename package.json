@@ -1,0 +1,19 @@
+{
+  "name": "final-project-404-not-found",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neu-mis-info6150-spring-2019/final-project-404-not-found.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neu-mis-info6150-spring-2019/final-project-404-not-found/issues"
+  },
+  "homepage": "https://github.com/neu-mis-info6150-spring-2019/final-project-404-not-found#readme"
+}

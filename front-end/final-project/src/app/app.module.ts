@@ -20,8 +20,11 @@ import { FormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
 import { BookingComponent } from './booking/booking.component';
 import { ReceiptComponent } from './receipt/receipt.component';
-import { AdminComponent } from './admin/admin.component';
-import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AdminloginComponent } from './adminlogin/adminlogin.component'
+import { AdminaddhotelComponent } from './adminaddhotel/adminaddhotel.component';
+import { AdmindetailsComponent } from './admindetails/admindetails.component';
 
 
 @NgModule({
@@ -40,8 +43,10 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     DetailsComponent,
     BookingComponent,
     ReceiptComponent,
-    AdminComponent,
+    AdminhomeComponent,
+    AdminaddhotelComponent,
     AdminloginComponent,
+    AdmindetailsComponent,
 
   ],
   imports: [
@@ -52,7 +57,7 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     AppRoutingModule,
     FlexLayoutModule,
     HttpClientModule,
-
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
