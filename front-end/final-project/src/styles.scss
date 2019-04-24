@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+  }
+  
+
+//styling for unordered list
+ul {
+    list-style-type: none;
+    margin:0;padding:0;
+
+    // styling for list elements
+    li {
+        background: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 8px;
+        
+        //styling for the contact first name and last name and refering it as a link 
+        a {
+            font-size: 1.5em;
+            text-decoration: none;
+            font-weight: bold;
+            color:#00A8FF;
+        }
+        
+        ul {
+            margin-top: 20px;
+            
+            li {
+                padding:0;
+
+                a {
+                    font-size: 1em;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    // hovering style for each contacts
+    li:hover {
+        background: rgba(0, 0, 0, 0.623);
+        border-radius: 20px;
+    }
+}

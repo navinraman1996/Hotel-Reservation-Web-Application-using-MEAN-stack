@@ -1,0 +1,22 @@
+<!-- displaying the contact details for each contact -->
+<h1>Hotel Details</h1> 
+
+<!-- getting the details from the rest api and in the json data as contact -->
+<ul>
+  <li><strong>Hotel Name:</strong> {{contact$.product.hotelname}} </li>
+  <li><strong>About The Hotel</strong> {{contact$.product.description}} </li>
+  <li><strong>Number of Rooms Available:</strong> {{contact$.product.numberofguests}} </li>
+  <!-- <li><strong>Room Type</strong> {{contact$.product.roomtype}} </li> -->
+  <li><strong>Customer Ratings</strong> {{contact$.product.ratings}} /&nbsp;5</li>
+  <li><strong>Standard Room Price</strong>&nbsp; $&nbsp;{{contact$.product.price}}</li>
+</ul>
+<br>
+<button type="button" class="btn btn-primary" [routerLink]="['/adminaddhotel']" routerLinkActive="router-link-active">Edit</button>
+&nbsp;&nbsp;&nbsp;
+<!-- <button type="button" class="btn btn-success" [routerLink]="['/deletehotel/{{contact._id}}']" routerLinkActive="router-link-active">Delete</button> -->
+&nbsp;&nbsp;&nbsp;
+<button type="button" class="btn btn-success" [routerLink]="['/adminhome']" routerLinkActive="router-link-active">Go back to hotel list</button>
+
+
+
+{{contact.product._id}}

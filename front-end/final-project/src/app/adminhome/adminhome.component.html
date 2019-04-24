@@ -1,0 +1,10 @@
+<span>List of Hotels in Boston</span> &nbsp;&nbsp;&nbsp;
+<button type="button" class="btn btn-success" [routerLink]="['/adminaddhotel']" routerLinkActive="router-link-active">Add Hotel</button>
+<ul>
+  <!-- for each contact in the contacts list  -->
+  <li *ngFor="let contact of contacts$">  <!--Angular directive *ngFor-->
+    <a routerLink="/admindetails/{{contact._id}}">{{ contact.hotelname }}</a> <!--Using interpolation brackets to call upon the properties of the returned object to display them in the browser!-->
+    <span class="space">&nbsp;</span>
+    <a routerLink="/deletehotel/{{contact._id}}">Delete hotel</a>
+  </li>
+</ul>

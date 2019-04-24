@@ -1,0 +1,64 @@
+<h1>Add a new Hotel here...</h1>
+
+<!-- creating form for adding a new contact as a data entry -->
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+  <label>
+    Hotel Name: 
+    <input type="text" formControlName="hotelname" minlength="3" maxlength="15" required pattern="[A-Za-z]+"> 
+    <div *ngIf = "submitted && contactForm.controls.hotelname.errors" class="error">
+      <div *ngIf="contactForm.controls.hotelname.errors.required">Hotel name is required</div>
+      <div *ngIf="contactForm.controls.hotelname.errors.minlength || contactForm.controls.hotelname.errors.maxlength">Hotel name must be greater than 2 characters and less than 15 characters</div>
+    </div>
+  </label>
+
+  <!-- settiing the validation for the last name field with the error messages for each validation -->
+  <label>
+    About The Hotel:
+    <input type="text" formControlName="description" minlength="10" maxlength="100" required pattern="[A-Za-z]+">
+    <div *ngIf = "submitted && contactForm.controls.description.errors" class="error">
+      <div *ngIf="contactForm.controls.description.errors.required">description is required</div>
+      <div *ngIf="contactForm.controls.description.errors.minlength || contactForm.controls.description.errors.maxlength">description must be greater than 10 characters and less than 100 characters</div>
+    </div>
+  </label>
+
+  <!-- settiing the validation for the nuberofguests field with the error messages for each validation -->
+  <label>
+    No. of Rooms Available:
+    <input type="number" formControlName="numberofguests" min="0" max="30">
+    <div *ngIf = "submitted && contactForm.controls.numberofguests.errors" class="error">
+      <div *ngIf="contactForm.controls.numberofguests.errors.required">number of rooms is required</div>
+      <!-- <div *ngIf="contactForm.controls.numberofguests.errors.numberofguests">number of rooms must be in 0 to 30</div> -->
+    </div>
+  </label>
+
+  <!-- settiing the validation for the ratings field with the error messages for each validation -->
+  <label>
+    Customer Ratings:
+    <input type="number" formControlName="ratings" min="1" max="5">
+    <div *ngIf = "submitted && contactForm.controls.ratings.errors" class="error">
+      <div *ngIf="contactForm.controls.ratings.errors.required">ratings is required</div>
+      <!-- <div *ngIf="contactForm.controls.ratings.errors.minlength || contactForm.controls.ratings.errors.maxlength">ratings must be from 1 to 5</div> -->
+    </div>
+  </label>
+
+  <!-- settiing the validation for the number field with the error messages for each validation -->
+  <label>
+    Price:
+    <input type="text" formControlName="price" minlength="2" maxlength="4">
+    <div *ngIf = "submitted && contactForm.controls.price.errors" class="error">
+      <div *ngIf="contactForm.controls.price.errors.required">price is required</div>
+      <div *ngIf="contactForm.controls.price.errors.minlength || contactForm.controls.price.errors.maxlength">price is either too small or too big</div>
+    </div>
+  </label>
+
+  <!-- add contact button (submit button for the form) -->
+  <!-- <input type="submit" value="Add Contact" class="formButton"> -->
+<input type="submit" value="Add Hotel" class="formButton">
+  &nbsp;&nbsp;&nbsp;
+  <button type="button" value="Update Contact" (click)="update()" class="formButton"> update </button>
+  &nbsp;&nbsp;&nbsp;
+  <button type="button" class="btn btn-success" [routerLink]="['/adminhome']" routerLinkActive="router-link-active">Go back to hotel list</button>
+  submitted message
+  <h3 *ngIf="success">*********New contact has been added!*********</h3>
+</form>

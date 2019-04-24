@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+<h1>Hotels Available</h1>
+=======
+<h1>Hotels Hawaii</h1>
+>>>>>>> 7c16eb1262e19087d6eed975a1b034d04b97f988
+
+<ul>
+  <!-- for each contact in the contacts list  -->
+  <li *ngFor="let contact of contacts$">  <!--Angular directive *ngFor-->
+    <a routerLink="/details/{{contact._id}}">{{ contact.hotelname }} {{ contact.roomtype }}</a> <!--Using interpolation brackets to call upon the properties of the returned object to display them in the browser!-->
+  </li>
+</ul>

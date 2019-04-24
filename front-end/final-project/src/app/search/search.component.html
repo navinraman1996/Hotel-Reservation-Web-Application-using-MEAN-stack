@@ -1,0 +1,43 @@
+<ng-template #buttons>
+    <a class="btn btn-info" [routerLink]="['/login']">Login</a>
+    <a class="btn btn-primary" [routerLink]="['/signup']">Sign-up</a> 
+  </ng-template>
+    <div *ngIf="userService.loggedIn(); else buttons" class="container">
+      <div class="hero-container">
+        <div id="form-container">
+          <form>
+            <h4>Search for hotels</h4>
+            
+            <label>Destination:
+              <input type="text" placeholder="Boston" >
+            </label>
+            
+            <label>Check-in Date
+              <input type="date">
+            </label>
+            
+            <label>Check-out Date
+                <input type="date">
+            </label>
+  
+            <label>No. of adults
+                <input type="number" placeholder="2 adults">
+            </label>
+  
+            <label>No. of children
+                <input type="number" placeholder="0">
+            </label>
+            
+            <label>No. of rooms
+                <input type="number" placeholder="1 room">
+            </label>
+  
+            <input type="submit" value="Search" routerLink="/accomodation">
+          </form>
+        </div>
+  
+        <div class="thailand" fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+          <h3>Boston</h3>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,44 @@
+<ng-template #buttons>
+  <a class="btn btn-info" [routerLink]="['/login']">Login</a>
+  <a class="btn btn-primary" [routerLink]="['/signup']">Sign-up</a> 
+</ng-template>
+  <div *ngIf="userService.loggedIn(); else buttons" class="container">
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+      <!------ Include the above in your HEAD tag ---------->
+      
+      <div class="jumbotron jumbotron-sm">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12 col-lg-12">
+                      <h1 class="h1">
+                          Contact us <small>Feel free to contact us</small></h1>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-8">
+                  <div class="col-md-4">
+                  <form>
+                  <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+                  <address>
+                      <strong>Hawaii resorts, Inc.</strong><br>
+                      795 Folsom Ave, Suite 600<br>
+                      Little havana, HA 94107<br>
+                      <abbr title="Phone">
+                          P: </abbr>
+                      (123) 456-7890
+                  </address>
+                  <address>
+                      <strong>Full Name</strong><br>
+                      <a href="mailto:#">holidayresortsbooking@gmail.com</a>
+                  </address>
+                  </form>
+              </div>
+          </div>
+      </div>
+      
+</div>

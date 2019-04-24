@@ -1,0 +1,124 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$thea-primary: (
+  50 : #ffffff,
+  100 : #ffffff,
+  200 : #ffffff,
+  300 : #ddf1ef,
+  400 : #c8e8e5,
+  500 : #b2dfdb,
+  600 : #9cd6d1,
+  700 : #87cdc7,
+  800 : #71c4bd,
+  900 : #5cbbb3,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #d2f2ef,
+  A700 : #c2e9e5,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$thea-accent: (
+  50 : #ffffff,
+  100 : #ffffff,
+  200 : #ffffff,
+  300 : #ffffff,
+  400 : #ffffff,
+  500 : #fff8e1,
+  600 : #fff1c2,
+  700 : #ffeaa4,
+  800 : #ffe385,
+  900 : #ffdb67,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffffff,
+  A700 : #fffefa,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+$final-project-primary: mat-palette($thea-primary, 700, 300, 900);
+$final-project-accent:  mat-palette($thea-accent, 500, 400, 700);
+
+$final-project-warn:    mat-palette($mat-red);
+
+$final-project: mat-light-theme($final-project-primary, $final-project-accent, $final-project-warn);
+
+@import './app/navigation/navtabs/navtabs.component-theme.scss';
+
+@include angular-material-theme($final-project);
+
+// Navtabs component scss file
+@include navtabs-component-theme($final-project);
+
+
+///////////////////////////////////////////////////////
+$thea-typography: mat-typography-config(
+  $font-family:   'Rubik, sans-serif',
+  $display-4:     mat-typography-level(112px, 112px, 300),
+  $display-3:     mat-typography-level(56px, 56px, 400),
+  $display-2:     mat-typography-level(45px, 48px, 400),
+  $display-1:     mat-typography-level(34px, 40px, 400),
+  $headline:      mat-typography-level(97.54px, 32px, 400),
+  $title:         mat-typography-level(61px, normal, 500),
+  $subheading-2:  mat-typography-level(48.77px, normal, 400),
+  $subheading-1:  mat-typography-level(34.54px, normal, 400),
+  $body-2:        mat-typography-level(14.22px, normal, 500),
+  $body-1:        mat-typography-level(16.26px, normal, 400),
+  $caption:       mat-typography-level(12.19px, normal, 400),
+  $button:        mat-typography-level(14.22px, normal, 500),
+  // Line-height must be unit-less fraction of the font-size.
+  $input:         mat-typography-level(inherit, 1.125, 400)
+);
+
+@include mat-base-typography($thea-typography);
+
+// Override typography for a specific Angular Material components.
+@include mat-checkbox-typography($thea-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($thea-typography);
+
+@include mat-core($thea-typography);
+
+
+// All our styles will go here
+.mat-list-option:hover, 
+.mat-list-option.mat-list-item-focus, 
+.mat-nav-list .mat-list-item:hover, 
+.mat-nav-list .mat-list-item.mat-list-item-focus {
+  background-color: mat-color($final-project-primary, 500);
+  color: mat-color($final-project-primary, 700);
+}
