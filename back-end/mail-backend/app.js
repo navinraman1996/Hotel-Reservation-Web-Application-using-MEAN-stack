@@ -1,14 +1,22 @@
-const express = require("express");
+/*Bringing togeather all the dependencies*/
+const express = require("express");//express is used for creating REST services
+//cors is for accessing of resources from the remote host
+
 const cors = require("cors");
+
+//bodyparser is used to parse the requests and send the response to the client
 const bodyParser = require("body-parser");
+
+//nodemailer is used for sending email
 const nodemailer = require("nodemailer");
 
+//details.json is where we can save our email id and password
 const details = require("./details.json");
 
 const app = express();
 app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
-
+/* The application starts running at port 3002 and prints the following message in the console*/
 app.listen(3002, () => {
   console.log("The server started on port 3002 !!!!!!");
 });
@@ -18,7 +26,11 @@ app.get("/", (req, res) => {
     "<h1 style='text-align: center'>Wellcome to backend<br><br></h1>"
   );
 });
-
+/**
+ * post method has request and response as the call back methods
+ * req.body is used to grab the request coming from the frontend
+ * sendMail method uses user and info as the call back and prints a message in the terminal once the email is sent
+ */
 app.post("/sendmail", (req, res) => {
   console.log("request came");
   let user = req.body;
