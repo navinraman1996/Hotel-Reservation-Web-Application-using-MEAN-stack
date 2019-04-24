@@ -27,7 +27,7 @@ const upload=multer({storage:storage});
 router.get('/',BookingsController.bookings_get_all);
       
 //to create a booking
-router.post('/',upload.single('hotelImage'),BookingsController.bookings_create_bookings);
+router.post('/',BookingsController.bookings_create_bookings);
 //to obtain a specific booking
 router.get("/:bookingId",BookingsController.bookings_get_specific);
 

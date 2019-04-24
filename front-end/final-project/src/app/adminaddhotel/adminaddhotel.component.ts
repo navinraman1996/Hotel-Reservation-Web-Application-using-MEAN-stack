@@ -20,10 +20,11 @@ export class AdminaddhotelComponent implements OnInit {
     this.contactForm = this.formBuilder.group ({
 
       /** We have 4 properties, fname, lname, email and number and giving the validation properties. */
-      fname: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],
-      lname: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],
-      email: ['', [Validators.required, Validators.email]],
-      number: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]]
+      hotelname: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],
+      description: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(100)]],
+      numberofguests: ['', [Validators.required]],
+      ratings: ['', [Validators.required]],
+      price: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(4)]]
     });
   }
 
@@ -41,7 +42,7 @@ export class AdminaddhotelComponent implements OnInit {
     console.log(this.contactForm.value); // printing the values in the log output
 
     this.Data.postContact(this.contactForm.value) // calling the postContact method by passing the form values and subscribing to it
-    .subscribe(Response => { //
+    .subscribe(Response => { 
       console.log("success" , Response)
     });
     

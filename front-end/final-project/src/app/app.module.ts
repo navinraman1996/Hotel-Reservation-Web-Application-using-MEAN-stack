@@ -25,6 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AdminloginComponent } from './adminlogin/adminlogin.component'
 import { AdminaddhotelComponent } from './adminaddhotel/adminaddhotel.component';
 import { AdmindetailsComponent } from './admindetails/admindetails.component';
+import { DeletehotelComponent } from './deletehotel/deletehotel.component';
+import { ConfirmbookingComponent } from './confirmbooking/confirmbooking.component';
 
 //adding the components required for the application
 @NgModule({
@@ -47,6 +49,8 @@ import { AdmindetailsComponent } from './admindetails/admindetails.component';
     AdminaddhotelComponent,
     AdminloginComponent,
     AdmindetailsComponent,
+    DeletehotelComponent,
+    ConfirmbookingComponent,
 
   ],
   //import the various packages required in our application

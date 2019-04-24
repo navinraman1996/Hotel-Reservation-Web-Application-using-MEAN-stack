@@ -1,3 +1,4 @@
+//bringing togeather all dependencies 
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('mongodb');
@@ -8,6 +9,7 @@ let count;
 let chatRooms;
 let messagesArray = [];
 
+//Calls the express function "express()" and puts new Express application inside the app variable (to start a new Express application)
 const app = express();
 
 // body-parser middleware
@@ -32,9 +34,10 @@ MongoClient.connect('mongodb+srv://chat_db:chat_db@chat-m9elf.mongodb.net/test?r
     }
     console.log("Connected to MongoDB");
     const db = Database.db("Chat_App"); 
-    users = db.collection("users"); // getting the users collection
-    chatRooms = db.collection("chatRooms"); /* getting the chatRooms collection. 
-                                                This collection would store chats in that room*/
+    // getting the users collection
+    users = db.collection("users"); 
+    /* getting the chatRooms collection. This collection would store chats in that room*/
+    chatRooms = db.collection("chatRooms"); 
     
     // starting the server on the port number 3000 and storing the returned server variable 
     const server = app.listen(port, () => {
@@ -42,11 +45,13 @@ MongoClient.connect('mongodb+srv://chat_db:chat_db@chat-m9elf.mongodb.net/test?r
     });
     const io = socket.listen(server);
 
-    /* 'connection' is a socket.io event that is triggered when a new connection is 
-       made. Once a connection is made, callback is called. */
-    io.sockets.on('connection', (socket) => { /* socket object allows us to join specific clients 
-                                                to chat rooms and also to catch
-                                                and emit the events.*/
+    /**
+     * 'connection' is a socket.io event that is triggered when a new connection is 
+       made. Once a connection is made, callback is called. 
+     * socket object allows us to join specific clients  to chat rooms and also to catch
+     * and emit the events. 
+     */
+    io.sockets.on('connection', (socket) => { 
         // 'join event'
         socket.on('join', (data) => {          
             socket.join(data.room);
@@ -70,8 +75,10 @@ MongoClient.connect('mongodb+srv://chat_db:chat_db@chat-m9elf.mongodb.net/test?r
         });
         // catching the message event
         socket.on('message', (data) => {
+
             // emitting the 'new message' event to the clients in that room
             io.in(data.room).emit('new message', {user: data.user, message: data.message});
+            
             // save the message in the 'messages' array of that chat-room
             chatRooms.update({name: data.room}, { $push: { messages: { user: data.user, message: data.message } } }, (err, res) => {
                 if(err) {
