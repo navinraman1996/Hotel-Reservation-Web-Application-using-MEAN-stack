@@ -21,13 +21,7 @@ const storage=multer.diskStorage({
     }
 });
 
-//provision of adding file filters
-// const fileFilter=(req,file,cb)=>{
-//     if(file.mimetype==='image/jpeg'||file.mimetype==='image/png')
-//        cb(null,true);
-//        else
-//        cb(null,false);
-// };
+//assigning a storage for the uploaded pictures using the muter middleware
 const upload=multer({storage:storage});
 
 router.get('/',BookingsController.bookings_get_all);

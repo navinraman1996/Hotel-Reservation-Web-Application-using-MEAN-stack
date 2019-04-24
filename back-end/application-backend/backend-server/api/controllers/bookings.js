@@ -1,4 +1,7 @@
 
+//controller for booking
+
+
 //importing the model
 const Booking=require('../models/bookings')
 //importing mongoose
@@ -6,6 +9,7 @@ const mongoose=require('mongoose');
 
 const hotelService = require('../services/bookingService');
 
+//to get all the bookings
 exports.bookings_get_all= (req,res,next) => {
     const resolve = (docs) => {
         res.status(200);
@@ -13,7 +17,7 @@ exports.bookings_get_all= (req,res,next) => {
     };
     hotelService.search({}).then(resolve).catch(renderErrorResponse(res));
 };
-
+//to create a specific booking using the the name of a hotel , number of guests ,type of room,ratings,price,description and hotel image
 exports.bookings_create_bookings = (req,res,next)=> {
     const resolve = (result) => {
         console.log(result);
@@ -46,7 +50,7 @@ exports.bookings_create_bookings = (req,res,next)=> {
     });
     hotelService.save(booking).then(resolve).catch(renderErrorResponse(res));
 }
-
+//to get a specific booking
 exports.bookings_get_specific = (req,res,next) => {
 
     console.log(req.params.bookingId);
@@ -64,7 +68,7 @@ exports.bookings_get_specific = (req,res,next) => {
     hotelService.get(req.params.bookingId).then(resolve).catch(renderErrorResponse(res));
 };
 
-
+//to delete a specific booking
 exports.bookings_delete = (req,res,next)=>{
     console.log(req.params.bookingId);
 

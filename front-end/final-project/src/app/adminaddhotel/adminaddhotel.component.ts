@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./adminaddhotel.component.scss']
 })
 export class AdminaddhotelComponent implements OnInit {
-
+//adding a form control to acheive various form features
   contactForm: FormGroup;
 
   /**setting a boolean properties that will help us determine when the form has been submitted and if it validation is successful. */

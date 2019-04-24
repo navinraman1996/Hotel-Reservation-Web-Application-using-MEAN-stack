@@ -26,7 +26,7 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component'
 import { AdminaddhotelComponent } from './adminaddhotel/adminaddhotel.component';
 import { AdmindetailsComponent } from './admindetails/admindetails.component';
 
-
+//adding the components required for the application
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +49,7 @@ import { AdmindetailsComponent } from './admindetails/admindetails.component';
     AdmindetailsComponent,
 
   ],
+  //import the various packages required in our application
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

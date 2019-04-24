@@ -1,3 +1,6 @@
+
+//the service file of bookings
+
 'use strict'
 
 const Booking = require('../models/bookings');
@@ -32,7 +35,7 @@ exports.delete = (hotelId) => {
     const promise = Booking.remove({_id: hotelId});
     return promise;
 }
-
+//to update the booking details
 exports.update = (id,data) => {
     const promise = Booking.update({ _id : id},
         {$set: data}).exec();
