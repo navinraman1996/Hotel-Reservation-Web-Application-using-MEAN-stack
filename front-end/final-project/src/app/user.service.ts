@@ -13,13 +13,13 @@ export class UserService {
   saveUser(user) {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/api/users', user, {headers: headers});
+    return this.http.post('http://localhost:3002/api/users', user, {headers: headers});
   }
 
   login(user) {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/api/login', user, {headers: headers});
+    return this.http.post('http://localhost:3002/api/login', user, {headers: headers});
   }
 
   loggedIn() {
@@ -34,11 +34,11 @@ export class UserService {
   }
 
   getUsers() {
-    return this.http.get('http://localhost:3000/api/users');
+    return this.http.get('http://localhost:3002/api/users');
   }
 
   getChatRoomsChat(chatRoom) {
-    return this.http.get('http://localhost:3000/chatroom/' + chatRoom);
+    return this.http.get('http://localhost:3002/chatroom/' + chatRoom);
   }
   adminlogin(adminuser) {
     const headers = new HttpHeaders();
