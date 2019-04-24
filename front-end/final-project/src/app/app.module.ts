@@ -24,6 +24,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,6 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     ReceiptComponent,
     AdminComponent,
     AdminloginComponent,
-
   ],
   imports: [
     BrowserModule,
