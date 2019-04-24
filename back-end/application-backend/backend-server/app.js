@@ -13,9 +13,18 @@ const mongoose=require('mongoose')
 const bookingRoutes=require('./api/routes/bookings');
 const orderRoutes=require('./api/routes/orders');
 //connecting to the database
-mongoose.connect('mongodb+srv://assignment_8:'+process.env.MONGO_ATLAS_PW+'@cluster0-5ffvf.mongodb.net/test?retryWrites=true',
-{useNewUrlParser:true}
-);
+// mongoose.connect('mongodb+srv://assignment_8:'+process.env.MONGO_ATLAS_PW+'@cluster0-5ffvf.mongodb.net/test?retryWrites=true',
+// {useNewUrlParser:true}
+// );
+
+mongoose.connect(
+    "mongodb+srv://addressBook_db:addressBook_db@node-rest-addressbook-zzdhh.mongodb.net/test?retryWrites=true", 
+    {
+        useNewUrlParser: true
+    }
+  );
+
+
 mongoose.Promise=global.Promise;
 //adding the logger middleware
 app.use(morgan('dev'));
