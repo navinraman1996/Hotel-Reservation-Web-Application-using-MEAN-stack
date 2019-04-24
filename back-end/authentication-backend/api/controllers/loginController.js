@@ -1,8 +1,9 @@
+//These are added to the logincontroller so as to use them here
 const Login = require('../models/loginModel');
 const mongodb = require('mongodb');
-
 const loginService = require('../services/loginServices');
 
+//exporting the gethome from the get method defined in the routes
 exports.gethome = (req, res, next) => {
     const resolve = (docs) => {
 
@@ -12,6 +13,7 @@ exports.gethome = (req, res, next) => {
     loginService.then(resolve)
 };
 
+//exporting postuser from the post method defined in the routes
 exports.postuser = (req, res, next) => {
     const resolve = (result) => {
         console.log(result);
@@ -55,7 +57,7 @@ exports.postuser = (req, res, next) => {
         }
     });
 }
-
+//exporting postlogin from the post method defined in the routes
 exports.postlogin = (req, res) => {
     const resolve = (result) =>{
         console.log(result);
@@ -90,6 +92,7 @@ exports.postlogin = (req, res) => {
     });
 }
 
+//exporting getuser from the get method defined in the routes
 exports.getuser = (req, res, next) => {
     const resolve = (result) => {
         console.log(result);
@@ -105,6 +108,7 @@ exports.getuser = (req, res, next) => {
     });
 }
 
+//exporting getroom from the get method defined in the routes
 exports.getroom = (req, res, next) => {
     const resolve = (result) => {
         console.log(result);

@@ -26,6 +26,7 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component'
 import { AdminaddhotelComponent } from './adminaddhotel/adminaddhotel.component';
 import { AdmindetailsComponent } from './admindetails/admindetails.component';
 import { DeletehotelComponent } from './deletehotel/deletehotel.component';
+import { ConfirmbookingComponent } from './confirmbooking/confirmbooking.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { DeletehotelComponent } from './deletehotel/deletehotel.component';
     AdminloginComponent,
     AdmindetailsComponent,
     DeletehotelComponent,
+    ConfirmbookingComponent,
 
   ],
   imports: [
