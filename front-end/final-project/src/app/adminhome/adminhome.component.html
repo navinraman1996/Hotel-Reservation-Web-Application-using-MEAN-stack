@@ -3,6 +3,8 @@
 <ul>
   <!-- for each contact in the contacts list  -->
   <li *ngFor="let contact of contacts$">  <!--Angular directive *ngFor-->
-    <a routerLink="/admindetails/{{contact._id}}">{{ contact.fname }} {{ contact.lname }}</a> <!--Using interpolation brackets to call upon the properties of the returned object to display them in the browser!-->
+    <a routerLink="/admindetails/{{contact._id}}">{{ contact.hotelname }}</a> <!--Using interpolation brackets to call upon the properties of the returned object to display them in the browser!-->
+    <span class="space">&nbsp;</span>
+    <a routerLink="/deletehotel/{{contact._id}}">Delete hotel</a>
   </li>
 </ul>

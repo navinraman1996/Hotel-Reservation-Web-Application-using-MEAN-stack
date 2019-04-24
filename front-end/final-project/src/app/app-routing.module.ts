@@ -17,6 +17,7 @@ import { AdminaddhotelComponent } from './adminaddhotel/adminaddhotel.component'
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { ReceiptComponent } from './receipt/receipt.component';
 import { AdmindetailsComponent } from './admindetails/admindetails.component';
+import { DeletehotelComponent } from './deletehotel/deletehotel.component';
 import { ConfirmbookingComponent } from './confirmbooking/confirmbooking.component';
 
 const routes: Routes = [
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'receipt', component: ReceiptComponent },
   { path: 'adminhome', component: AdminhomeComponent },
   { path: 'adminaddhotel', component: AdminaddhotelComponent },
+  { path: 'deletehotel/:id', component: DeletehotelComponent },
   { path: 'confirmbooking', component: ConfirmbookingComponent },
 ];
 

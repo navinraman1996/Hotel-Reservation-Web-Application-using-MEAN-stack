@@ -119,6 +119,6 @@ $thea-typography: mat-typography-config(
 .mat-list-option.mat-list-item-focus, 
 .mat-nav-list .mat-list-item:hover, 
 .mat-nav-list .mat-list-item.mat-list-item-focus {
-  background-color: mat-color($final-project-primary, 300);
-  color: mat-color($final-project-primary, 900);
+  background-color: mat-color($final-project-primary, 500);
+  color: mat-color($final-project-primary, 700);
 }

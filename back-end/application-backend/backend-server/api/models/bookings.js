@@ -9,11 +9,11 @@ const bookingSchema= Schema({
     _id:mongoose.Schema.Types.ObjectId,
     hotelname:{type:String,required:true},
     numberofguests:{type:Number,required:true},
-    roomtype:{type:String,required:true},
-    ratings:{type:String,required:true},
+    roomtype:{type:String},
+    ratings:{type:String,},
     price:{type:Number, required:true},
-    description:{type:String,required:true},
-    hotelImage:{type:String}
+    description:{type:String,required:true}
+    // hotelImage:{type:String}
     
 });
 module.exports=mongoose.model('Booking',bookingSchema);

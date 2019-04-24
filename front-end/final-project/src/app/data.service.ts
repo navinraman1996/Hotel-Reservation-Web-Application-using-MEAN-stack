@@ -15,7 +15,7 @@ export class DataService {
   // tslint:disable-next-line:jsdoc-format
   /** This method is used to get all the contacts from the database*/
   getUsers() {
-    return this.http.get('http://localhost:3000/addressBook/'); // get is used to get all the data in the mentioned url
+    return this.http.get('http://localhost:3000/bookings/'); // get is used to get all the data in the mentioned url
   }
 
   /** This method will provide us with a single contact information
@@ -23,7 +23,15 @@ export class DataService {
    * @param id: which will accept a userId as a parameter
    */
   getContact(id) {
-    return this.http.get('http://localhost:3000/addressBook/' + id);
+    return this.http.get('http://localhost:3000/bookings/' + id);
+  }
+
+  /** This method will provide us with a single contact information
+   *
+   * @param id: which will accept a userId as a parameter
+   */
+  deleteHotel(id) {
+    return this.http.delete('http://localhost:3000/bookings/' + id);
   }
 
   /**This method will provide us to post a new contact to store in the database
@@ -35,7 +43,7 @@ export class DataService {
 
     // tslint:disable-next-line:max-line-length
     // post is used to post a new data entry to the specific url and passes argument such as a object and the headers for content type of the data
-    return this.http.post('http://localhost:3000/addressBook/', NewContacts, {
+    return this.http.post('http://localhost:3000/bookings/', NewContacts, {
 
       // HTTP headers allow the client and the server to pass additional information with the request or the response.
       headers: new HttpHeaders({

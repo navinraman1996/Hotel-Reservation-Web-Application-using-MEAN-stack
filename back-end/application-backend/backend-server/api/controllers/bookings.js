@@ -26,7 +26,7 @@ exports.bookings_create_bookings = (req,res,next)=> {
                 ratings:result.ratings,
                 price:result.price,
                 description:result.description,
-                hotelimage:result.hotelimage,
+                // hotelimage:result.hotelimage,
                 request:{
                     type:'GET',
                             url:'http://localhost:3000/bookings/'+result._id
@@ -41,8 +41,8 @@ exports.bookings_create_bookings = (req,res,next)=> {
         roomtype:req.body.roomtype,
         ratings:req.body.ratings,
         price:req.body.price,
-        description:req.body.description,
-        hotelImage:req.file.path
+        description:req.body.description
+        // hotelImage:req.file.path
     });
     hotelService.save(booking).then(resolve).catch(renderErrorResponse(res));
 }
@@ -94,8 +94,8 @@ exports.bookings_update=(req,res,next)=>{
         roomtype:req.body.roomtype,
         ratings:req.body.ratings,
         price:req.body.price,
-        description:req.body.description,
-        productImage:req.file.path
+        description:req.body.description
+        // productImage:req.file.path
           }
     
     const resolve = (hotel) => {

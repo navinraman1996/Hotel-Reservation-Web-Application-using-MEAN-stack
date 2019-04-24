@@ -25,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AdminloginComponent } from './adminlogin/adminlogin.component'
 import { AdminaddhotelComponent } from './adminaddhotel/adminaddhotel.component';
 import { AdmindetailsComponent } from './admindetails/admindetails.component';
+import { DeletehotelComponent } from './deletehotel/deletehotel.component';
 import { ConfirmbookingComponent } from './confirmbooking/confirmbooking.component';
 
 
@@ -48,6 +49,7 @@ import { ConfirmbookingComponent } from './confirmbooking/confirmbooking.compone
     AdminaddhotelComponent,
     AdminloginComponent,
     AdmindetailsComponent,
+    DeletehotelComponent,
     ConfirmbookingComponent,
 
   ],
